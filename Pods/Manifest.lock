@@ -1,0 +1,20 @@
+PODS:
+  - Kingfisher (6.3.1)
+  - SwiftLint (0.44.0)
+
+DEPENDENCIES:
+  - Kingfisher (~> 6.0)
+  - SwiftLint
+
+SPEC REPOS:
+  trunk:
+    - Kingfisher
+    - SwiftLint
+
+SPEC CHECKSUMS:
+  Kingfisher: 016c8b653a35add51dd34a3aba36b580041acc74
+  SwiftLint: e96c0a8c770c7ebbc4d36c55baf9096bb65c4584
+
+PODFILE CHECKSUM: 09bd40535fa1e717fd5ec319a880779c1c58837c
+
+COCOAPODS: 1.11.2
