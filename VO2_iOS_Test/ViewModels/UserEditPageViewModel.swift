@@ -23,11 +23,12 @@ final class UserEditPageViewModel {
     @Published var updateUserState: UpdateUserState = .waiting
     var subscriptions = Set<AnyCancellable>()
 
-    let service = UserService(networkRequest: NativeRequestable(), environment: .development)
+    let service:UserService
     var dataManager: CoreDataManagerProtocol
     
-    init(dataManager: CoreDataManagerProtocol = CoreDataManager.shared) {
+    init(dataManager: CoreDataManagerProtocol = CoreDataManager.shared,service:UserService = UserService.shared) {
         self.dataManager = dataManager
+        self.service = service
     }
     func setUser(user: User) {
         self.user = user

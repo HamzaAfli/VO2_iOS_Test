@@ -24,12 +24,12 @@ final class MainViewModel {
     @Published var  fetchUserState: FetchUserState = .waiting
     var subscriptions = Set<AnyCancellable>()
 
-    let service = UserService(networkRequest: NativeRequestable(), environment: .development)
-
+    let service:UserService
     var dataManager: CoreDataManagerProtocol
     
-    init(dataManager: CoreDataManagerProtocol = CoreDataManager.shared) {
+    init(dataManager: CoreDataManagerProtocol = CoreDataManager.shared,service:UserService = UserService.shared) {
         self.dataManager = dataManager
+        self.service = service
     }
 }
 
